@@ -58,14 +58,14 @@ const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
         <Grid item xs={12} sm={6}>
           {renderSelect({
             state,
-            name: "highestDegree",
+            name: "Applying for Degree",
             label: "Applying for Degree",
             options: [
-              { key: "Graduation", value: "Graduation" },
-              { key: "B.Tech", value: "B.Tech" },
-              { key: "BCA", value: "BCA Course" },
-              { key: "M.Tech", value: "M.Tech" },
-              { key: "MCA", value: "MCA" },
+              { key: "CSE", value: "CSE" },
+              { key: "ISE", value: "ISE" },
+              { key: "ECE", value: "ECE" },
+              { key: "EEE", value: "EEE" },
+              { key: "Mech", value: "Mech" },
             ],
             onChange: handleChange,
           })}
