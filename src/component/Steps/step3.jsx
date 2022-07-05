@@ -26,53 +26,10 @@ const Step3 = ({
         })}
       </Box>
       {/* skill: "",
-      workExperence: "",
-      expectedSalary: "", */}
+      ifany: "",
+      interestedtopics: "", */}
 
       <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-        {/* <Grid item xs={12} sm={6}>
-          {renderSelect({
-            state,
-            name: "skill",
-            label: "Skills You have",
-            options: [
-              { key: "Programming", value: "Programming" },
-              { key: "Communication", value: "Communication" },
-              { key: "Designing", value: "Designing" },
-              { key: "not Yet Defined", value: "not Yet Defined" },
-            ],
-            onChange: handleChange,
-          })}
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          {renderSelect({
-            state,
-            name: "workExperence",
-            label: "Experence You have",
-            options: [
-              { key: "Less than 1 year", value: "Less than 1 year" },
-              { key: "More than 1 year", value: "More than 1 year" },
-              { key: "1 year", value: "1 year" },
-            ],
-            onChange: handleChange,
-          })}
-        </Grid> */}
-      </Grid>
-
-      <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-        {/* <Grid item xs={12} sm={6}>
-          {renderSelect({
-            state,
-            name: "jobType",
-            label: "Choose Work Type",
-            options: [
-              { key: "Marketting", value: "Marketting" },
-              { key: "Official Work", value: "Official Work" },
-              { key: "Work from home", value: "Work from home" },
-            ],
-            onChange: handleChange,
-          })}
-        </Grid> */}
         <Grid item xs={12} sm={6}>
           {renderInputField({
             state,
@@ -81,6 +38,11 @@ const Step3 = ({
             onChange: handleChange,
           })}
         </Grid>
+      </Grid>
+
+      <Grid container spacing={1} style={{ marginBottom: "16px" }}>
+
+
         <Grid item xs={12} sm={6}>
           {renderInputField({
             state,
