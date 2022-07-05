@@ -19,7 +19,7 @@ const Step3 = ({
     <Paper style={styles.steps}>
       <Box mt={2} mb={2}>
         {renderText({
-          label: "Adress",
+          label: "Address",
           type: "h6",
           color: "textPrimary",
           align: "center",
@@ -30,7 +30,7 @@ const Step3 = ({
       expectedSalary: "", */}
 
       <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-        <Grid item xs={12} sm={6}>
+        {/* <Grid item xs={12} sm={6}>
           {renderSelect({
             state,
             name: "skill",
@@ -56,11 +56,11 @@ const Step3 = ({
             ],
             onChange: handleChange,
           })}
-        </Grid>
+        </Grid> */}
       </Grid>
 
       <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-        <Grid item xs={12} sm={6}>
+        {/* <Grid item xs={12} sm={6}>
           {renderSelect({
             state,
             name: "jobType",
@@ -72,12 +72,20 @@ const Step3 = ({
             ],
             onChange: handleChange,
           })}
+        </Grid> */}
+        <Grid item xs={12} sm={6}>
+          {renderInputField({
+            state,
+            name: "Home Address",
+            label: "Home Address",
+            onChange: handleChange,
+          })}
         </Grid>
         <Grid item xs={12} sm={6}>
           {renderInputField({
             state,
-            name: "expectedSalary",
-            label: " Expected Salaty",
+            name: "Permantend Address",
+            label: "Permantend Address",
             onChange: handleChange,
           })}
         </Grid>
