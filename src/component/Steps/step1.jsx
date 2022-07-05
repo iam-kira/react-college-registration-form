@@ -37,7 +37,23 @@ const Step1 = ({ state, handleChange, handleNext }) => {
             label: "Last Name",
             onChange: handleChange,
           })}
-        </Grid>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            {renderInputField({
+              state,
+              name: "Fathername",
+              label: "fathername",
+              onChange: handleChange,
+            })}
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            {renderInputField({
+              state,
+              name: "Mothername",
+              label: "mothername",
+              onChange: handleChange,
+            })}
+          </Grid>
       </Grid>
       <Grid container spacing={1} style={{ marginBottom: "16px" }}>
         <Grid item xs={12}>
@@ -66,16 +82,8 @@ const Step1 = ({ state, handleChange, handleNext }) => {
           <Grid item xs={12} sm={6}>
             {renderInputField({
               state,
-              name: "fathername",
-              label: "fathername",
-              onChange: handleChange,
-            })}
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            {renderInputField({
-              state,
-              name: "mothername",
-              label: "mothername",
+              name: "Income",
+              label: "Income",
               onChange: handleChange,
             })}
           </Grid>
