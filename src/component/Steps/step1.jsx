@@ -52,7 +52,8 @@ const Step1 = ({ state, handleChange, handleNext }) => {
             onChange: handleChange,
           })}
         </Grid>
-      </Grid>
+        </Grid>
+        
       <Grid container spacing={1} style={{ marginBottom: "16px" }}>
         <Grid item xs={12} sm={6}>
           {renderInputField({
@@ -61,7 +62,24 @@ const Step1 = ({ state, handleChange, handleNext }) => {
             label: "Phone",
             onChange: handleChange,
           })}
-        </Grid>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            {renderInputField({
+              state,
+              name: "fathername",
+              label: "fathername",
+              onChange: handleChange,
+            })}
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            {renderInputField({
+              state,
+              name: "mothername",
+              label: "mothername",
+              onChange: handleChange,
+            })}
+          </Grid>
+          
         <Grid item xs={12} sm={6}>
           {renderInputField({
             state,
