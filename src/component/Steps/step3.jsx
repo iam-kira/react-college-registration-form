@@ -19,7 +19,7 @@ const Step3 = ({
     <Paper style={styles.steps}>
       <Box mt={2} mb={2}>
         {renderText({
-          label: "Professional Details",
+          label: "Adress",
           type: "h6",
           color: "textPrimary",
           align: "center",
