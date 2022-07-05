@@ -41,16 +41,16 @@ const Step1 = ({ state, handleChange, handleNext }) => {
           <Grid item xs={12} sm={6}>
             {renderInputField({
               state,
-              name: "Fathername",
-              label: "fathername",
+              name: "fathername",
+              label: "Father Name",
               onChange: handleChange,
             })}
           </Grid>
           <Grid item xs={12} sm={6}>
             {renderInputField({
               state,
-              name: "Mothername",
-              label: "mothername",
+              name: "mothername",
+              label: "Mother Name",
               onChange: handleChange,
             })}
           </Grid>
