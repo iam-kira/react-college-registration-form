@@ -4,7 +4,7 @@ import { styles } from "../common/styles";
 import {
   renderButton,
   renderInputField,
-  renderSelect,
+  // renderSelect,
   renderText,
 } from "../common/DisplayComponent";
 
@@ -33,8 +33,16 @@ const Step3 = ({
         <Grid item xs={12} sm={6}>
           {renderInputField({
             state,
-            name: "Home Address",
+            name: "homeaddress",
             label: "Home Address",
+            onChange: handleChange,
+          })}
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          {renderInputField({
+            state,
+            name: "phonenumber",
+            label: "Father/Mother Phone Number",
             onChange: handleChange,
           })}
         </Grid>
@@ -46,11 +54,13 @@ const Step3 = ({
         <Grid item xs={12} sm={6}>
           {renderInputField({
             state,
-            name: "Permantend Address",
-            label: "Permantend Address",
+            name: "permanentaddress",
+            label: "Permanent Address",
             onChange: handleChange,
           })}
         </Grid>
+
+
       </Grid>
 
       <Grid container component={Box} justify='flex-end' mt={2} p={2}>

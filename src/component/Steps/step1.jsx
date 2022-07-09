@@ -10,7 +10,7 @@ import {
 
 const Step1 = ({ state, handleChange, handleNext }) => {
   return (
-    <div className="box-2">
+    <div >
     <Paper style={styles.steps} >
       <Box mt={2} mb={2} >
         {renderText({
@@ -41,16 +41,16 @@ const Step1 = ({ state, handleChange, handleNext }) => {
           <Grid item xs={12} sm={6}>
             {renderInputField({
               state,
-              name: "fathername",
-              label: "Father Name",
+              name: "fathersname",
+              label: "Father's Name",
               onChange: handleChange,
             })}
           </Grid>
           <Grid item xs={12} sm={6}>
             {renderInputField({
               state,
-              name: "mothername",
-              label: "Mother Name",
+              name: "mothersname",
+              label: "Mother's Name",
               onChange: handleChange,
             })}
           </Grid>

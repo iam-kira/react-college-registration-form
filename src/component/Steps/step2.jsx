@@ -7,7 +7,6 @@ import {
   renderSelect,
   renderText,
 } from "../common/DisplayComponent";
-
 const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
   return (
     <Paper style={styles.steps}>

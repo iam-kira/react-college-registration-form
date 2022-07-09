@@ -38,9 +38,9 @@ class FormComponent extends Component {
     },
     errors: {},
     steps: [
-      { label: "Personal Bio" },
-      { label: "Educational" },
-      { label: "Interests" },
+        { label: "Step1: Personal Bio" },
+        { label: "Step2: Education" },
+        { label: "Step3: Interests" },
     ],
     stepCount: 0,
   };
@@ -88,67 +88,83 @@ class FormComponent extends Component {
         case 1:
           return (
             <Step2
-              state={this.state}
-              handleChange={handleOnChange}
-              handleNext={handleNextStep}
-              handlePrev={handleBackStep}
+                  state={this.state}
+                  handleChange={handleOnChange}
+                  handleNext={handleNextStep}
+                  handlePrev={handleBackStep}
             />
           );
         case 2:
-          return (
+              return (
             <Step3
-              state={this.state}
-              handleChange={handleOnChange}
-              handleNext={handleNextStep}
-              handlePrev={handleBackStep}
-              handleSubmit={handleSubmit}
+                      state={this.state}
+                      handleChange={handleOnChange}
+                      handleNext={handleNextStep}
+                      handlePrev={handleBackStep}
+                      handleSubmit={handleSubmit}
             />
-          );
+              );
         case 3:
-          return <FinalStep data={this.state.data} />;
+              return <FinalStep data={this.state.data} />;
         default:
-          return (
+              return (
             <Step1
-              state={this.state}
-              handleChange={handleOnChange}
-              handleNext={handleNextStep}
+                      state={this.state}
+                      handleChange={handleOnChange}
+                      handleNext={handleNextStep}
             />
-          );
+              );
       }
     };
 
     return (
-      <Grid container className={classes.formContainer} >
-        <Grid item xs={12} sm={7} >
-          <form onSubmit={this.handleSubmit} className={classes.form}>
-            <Paper component={Box} mb={1} >
-              <Box pt={2} className="box-1">
-                {renderText({
-                  type: "h4",
-                  color: "",
-                  label: "Registration Form",
-                  align: "center",
-                })}
-              </Box>
+        <div className="main-div">
 
-              <Stepper  activeStep={this.state.stepCount} alternativeLabel>
-                {this.state.steps.map((item) => (
-                  <Step key={item.label}>
-                    <StepLabel>{item.label}</StepLabel>
-                  </Step>
-                ))}
-              </Stepper>
-            </Paper>
-            {getStepContent(this.state.stepCount)}
-          </form>
-        </Grid>
-      </Grid>
+
+            
+            <Box pt={2} className="box-1">
+                {renderText({
+                    type: "h4",
+                    color: "",
+                    label: "Registration Form",
+                    align: "center",
+                })}
+            </Box>
+
+
+            <Grid container className={classes.formContainer} >
+                <Box sx={{ maxWidth: 400 }}>
+                    <Stepper activeStep={this.state.stepCount} orientation="vertical" className="box-2">
+                        {this.state.steps.map((item) => (
+                            <Step key={item.label}>
+                                <StepLabel>{item.label}</StepLabel>
+                            </Step>
+                        ))}
+                    </Stepper>
+                </Box> 
+                {/* <Stepper activeStep={this.state.stepCount} alternativeLabel orientation="vertical" >
+                    {this.state.steps.map((item) => (
+                        <Step key={item.label}>
+                            <StepLabel>{item.label}</StepLabel>
+                        </Step>
+                    ))}
+                </Stepper> */}
+
+                <Grid item xs={12} sm={7} >
+                    {/* className={classes.form} */}
+                    <form onSubmit={this.handleSubmit} className={classes.form} >
+                        <Paper component={Box} mb={1}></Paper>
+                        {getStepContent(this.state.stepCount)}
+                    </form>
+                </Grid>
+            </Grid>
+        </div>
     );
   }
 }
 
 FormComponent.propTypes = {
-  classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(FormComponent);

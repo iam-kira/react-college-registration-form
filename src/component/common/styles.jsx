@@ -1,11 +1,11 @@
 import { blueGrey } from "@material-ui/core/colors";
-import { withThemeCreator } from "@material-ui/styles";
+// import { withThemeCreator } from "@material-ui/styles";
 
 export const styles = {
   formContainer: {
     display: "flex",
     flexFlow: "row Wrap",
-    justifyContent: "center",
+    justifyContent: "space-around",
     alignItems: "center",
     height: "98vh",
   },
